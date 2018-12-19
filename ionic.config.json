@@ -1,0 +1,7 @@
+{
+  "name": "pl-assignment-ionic-mobile-engineer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
