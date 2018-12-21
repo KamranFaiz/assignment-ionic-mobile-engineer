@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import {
   GoogleMaps,
@@ -25,7 +25,7 @@ declare var google;
   selector: 'page-location',
   templateUrl: 'location.html',
 })
-export class LocationPage {
+export class LocationPage implements OnInit{
 
   map: GoogleMap;
    AIR_PORTS = [];
@@ -86,6 +86,11 @@ export class LocationPage {
     });
 
     toast.present(toast);
+  }
+
+  ngOnInit(){
+  setInterval(()=> {
+    this.drawline(); },4000); 
   }
 
 
